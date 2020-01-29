@@ -14,7 +14,9 @@ namespace Sortering
     {
         int AntalTal;
         int[] TalArray;
+        int[] Sorteret;
         bool Bubble = false;
+        
 
 
         public Form1()
@@ -24,7 +26,12 @@ namespace Sortering
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-            AntalAfTal();
+            lstSorteretTal.Items.Clear();
+            if (cbnGenerettal.Checked == false)
+            {
+                lstGeneretTal.Items.Clear();
+                AntalAfTal();
+            }
             if (Bubble == true)
             {
                 Bubblesort();
@@ -38,31 +45,42 @@ namespace Sortering
         {
             int.TryParse(txtTalindput.Text, out AntalTal);
             TalArray = new int[AntalTal];
+            Sorteret = new int[AntalTal];
             Random rnd = new Random();
             for (int i = 0; i < TalArray.Length-1; i++)
             {
                 TalArray[i] = rnd.Next(1, 500);
+                Sorteret[i] = TalArray[i];
                 lstGeneretTal.Items.Add(TalArray[i]);
             }
+            
         }
 
         private void Bubblesort()
         {
-            for (int i2 = 0; i2 < TalArray.Length; i2++) //fået hjælp af michael til at forstå hvorfor der skal være 2 loops
+            if (cbnGenerettal.Checked == true)
             {
-                for (int i = 0; i < TalArray.Length - 1; i++)
+                for (int i = 0; i < Sorteret.Length; i++)
                 {
-                    if (TalArray[i] > TalArray[i + 1])
+                    Sorteret[i] = TalArray[i];
+                }
+            }
+
+            for (int j = 0; j < Sorteret.Length; j++) //fået hjælp af michael til at forstå hvorfor der skal være 2 loops
+            {
+                for (int i = 0; i < Sorteret.Length - 1; i++)
+                {
+                    if (Sorteret[i] > Sorteret[i + 1])
                     {
-                        int temp = TalArray[i + 1];
-                        TalArray[i + 1] = TalArray[i];
-                        TalArray[i] = temp;
+                        int temp = Sorteret[i + 1];
+                        Sorteret[i + 1] = Sorteret[i];
+                        Sorteret[i] = temp;
                     }
                 }
             }
-            for (int i = 1; i < TalArray.Length; i++)
+            for (int i = 1; i < Sorteret.Length; i++)
             {
-                lstSorteretTal.Items.Add(TalArray[i]);
+                lstSorteretTal.Items.Add(Sorteret[i]);
             }
         }
 

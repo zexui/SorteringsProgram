@@ -40,7 +40,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.cbnGenerettal = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtTalindput
@@ -53,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.Location = new System.Drawing.Point(9, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 17);
             this.label1.TabIndex = 1;
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 122);
+            this.label2.Location = new System.Drawing.Point(9, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 17);
             this.label2.TabIndex = 2;
@@ -116,7 +116,7 @@
             // 
             this.lstGeneretTal.FormattingEnabled = true;
             this.lstGeneretTal.ItemHeight = 16;
-            this.lstGeneretTal.Location = new System.Drawing.Point(258, 16);
+            this.lstGeneretTal.Location = new System.Drawing.Point(257, 12);
             this.lstGeneretTal.Name = "lstGeneretTal";
             this.lstGeneretTal.Size = new System.Drawing.Size(193, 516);
             this.lstGeneretTal.TabIndex = 9;
@@ -155,22 +155,22 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "cycles";
             // 
-            // radioButton1
+            // cbnGenerettal
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(15, 97);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(17, 16);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.cbnGenerettal.AutoSize = true;
+            this.cbnGenerettal.Location = new System.Drawing.Point(12, 97);
+            this.cbnGenerettal.Name = "cbnGenerettal";
+            this.cbnGenerettal.Size = new System.Drawing.Size(220, 21);
+            this.cbnGenerettal.TabIndex = 16;
+            this.cbnGenerettal.Text = "Vil du beholde de generet tal?";
+            this.cbnGenerettal.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 548);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.cbnGenerettal);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
@@ -204,7 +204,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.CheckBox cbnGenerettal;
     }
 }
 
