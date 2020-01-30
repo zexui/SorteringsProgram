@@ -36,8 +36,8 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.lstSorteretTal = new System.Windows.Forms.ListBox();
             this.lstGeneretTal = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.txtCycles = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbnGenerettal = new System.Windows.Forms.CheckBox();
@@ -121,21 +121,21 @@
             this.lstGeneretTal.Size = new System.Drawing.Size(193, 516);
             this.lstGeneretTal.TabIndex = 9;
             // 
-            // textBox1
+            // txtTime
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 428);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(159, 22);
-            this.textBox1.TabIndex = 11;
+            this.txtTime.Location = new System.Drawing.Point(12, 428);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.ReadOnly = true;
+            this.txtTime.Size = new System.Drawing.Size(159, 22);
+            this.txtTime.TabIndex = 11;
             // 
-            // textBox2
+            // txtCycles
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 491);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(159, 22);
-            this.textBox2.TabIndex = 12;
+            this.txtCycles.Location = new System.Drawing.Point(12, 491);
+            this.txtCycles.Name = "txtCycles";
+            this.txtCycles.ReadOnly = true;
+            this.txtCycles.Size = new System.Drawing.Size(159, 22);
+            this.txtCycles.TabIndex = 12;
             // 
             // label3
             // 
@@ -173,8 +173,8 @@
             this.Controls.Add(this.cbnGenerettal);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCycles);
+            this.Controls.Add(this.txtTime);
             this.Controls.Add(this.lstGeneretTal);
             this.Controls.Add(this.lstSorteretTal);
             this.Controls.Add(this.btnStart);
@@ -184,7 +184,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTalindput);
             this.Name = "Form1";
-            this.Text = "Shaker Shaker, Hey Partymaker";
+            this.Text = ",Shaker Shaker, Hey Partymaker";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,8 +200,8 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.ListBox lstSorteretTal;
         private System.Windows.Forms.ListBox lstGeneretTal;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTime;
+        private System.Windows.Forms.TextBox txtCycles;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox cbnGenerettal;

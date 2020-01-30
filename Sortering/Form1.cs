@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Sortering
@@ -17,8 +19,6 @@ namespace Sortering
         int[] Sorteret;
         bool Bubble = false;
         
-
-
         public Form1()
         {
             InitializeComponent();
@@ -58,6 +58,7 @@ namespace Sortering
 
         private void Bubblesort()
         {
+            Stopwatch Tid = new Stopwatch(); //funktion fra https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch.elapsed?view=netframework-4.8&fbclid=IwAR1eGBTJ-f5wk82Z5UMzgY_NEWFbyGWbVd3agGpH9-o29gaY-TVegAPjSxE
             if (cbnGenerettal.Checked == true)
             {
                 for (int i = 0; i < Sorteret.Length; i++)
@@ -65,6 +66,8 @@ namespace Sortering
                     Sorteret[i] = TalArray[i];
                 }
             }
+            int cycles = 0;
+            Tid.Start();
 
             for (int j = 0; j < Sorteret.Length; j++) //fået hjælp af michael til at forstå hvorfor der skal være 2 loops
             {
@@ -76,12 +79,18 @@ namespace Sortering
                         Sorteret[i + 1] = Sorteret[i];
                         Sorteret[i] = temp;
                     }
+                cycles++;
                 }
             }
+            Tid.Stop();
+
             for (int i = 1; i < Sorteret.Length; i++)
             {
                 lstSorteretTal.Items.Add(Sorteret[i]);
             }
+            txtCycles.Text = cycles.ToString();
+            txtTime.Text = ((Tid.Elapsed.TotalMilliseconds).ToString());
+
         }
 
         private void RbnBubble_CheckedChanged(object sender, EventArgs e)
